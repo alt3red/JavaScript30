@@ -69,8 +69,13 @@ progress.addEventListener('mousemove', (e) => mousedown && scrub(e));
 progress.addEventListener('mousedown', () => mousedown = true);
 progress.addEventListener('mouseup', () => mousedown = false);
 
-document.body.onkeyup = function(e) {
-    if(e.keyCode == 32){
+// document.body.onkeyup = function(e) {
+//     if(e.keyCode == 32){
+//         togglePlay();
+//     }
+// }
+document.addEventListener('keyup', function(e) {
+    if (e.which === 32) {
         togglePlay();
     }
-}
+});
